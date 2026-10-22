@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173b57">
+  <meta name="description" content="AKUN LMS - Learning Management System untuk siswa SMK Akuntansi dan Keuangan Lembaga.">
+  <title>AKUN LMS | Belajar Akuntansi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="AKUN LMS beranda">
+        <span class="brand-mark">▤</span>
+        <span><strong>AKUN LMS</strong><small>Learning Management System</small></span>
+      </a>
+      <div class="role-switch">
+        <label for="roleSelect">Tampilan akun</label>
+        <select id="roleSelect" aria-label="Pilih peran pengguna">
+          <option value="guru">Guru</option>
+          <option value="siswa">Siswa</option>
+        </select>
+      </div>
+      <nav id="navigation" class="navigation" aria-label="Navigasi utama"></nav>
+      <div class="sidebar-bottom">
+        <div class="profile-mini"><div class="avatar" id="sideAvatar">G</div><div><strong id="sideName">Bu Guru</strong><small id="sideRole">Guru</small></div></div>
+        <button class="nav-item logout-button" id="logoutBtn"><span>↪</span> Keluar</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menuToggle" aria-label="Buka menu">☰</button>
+        <div class="breadcrumb"><span>AKUN LMS</span><b>/</b><strong id="breadcrumbTitle">Dashboard</strong></div>
+        <div class="top-actions">
+          <label class="search-box"><span>⌕</span><input id="globalSearch" type="search" placeholder="Cari materi, tugas, atau kelas..." aria-label="Cari"></label>
+          <button class="icon-button notification-button" id="notificationBtn" aria-label="Notifikasi">♧<i></i></button>
+          <button class="user-button" id="profileBtn"><span class="avatar" id="topAvatar">G</span><span class="user-label"><strong id="topName">Bu Guru</strong><small id="topRole">Guru</small></span><span>⌄</span></button>
+        </div>
+      </header>
+
+      <section class="content" id="content" aria-live="polite"></section>
+      <footer class="footer">© <span id="year"></span> AKUN LMS <span>Belajar Akuntansi, Bangun Kompetensi, Siap Kerja.</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <input type="file" id="hiddenFileInput" hidden>
+  <script src="app.js"></script>
+</body>
+</html>
